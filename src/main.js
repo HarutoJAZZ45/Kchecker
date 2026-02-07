@@ -68,14 +68,22 @@ fileInput.addEventListener('change', (e) => {
     if (file) handleFile(file);
 });
 
+const updateTheme = (grade) => {
+    document.body.setAttribute('data-grade', grade);
+};
+
 gradePills.forEach(btn => {
     btn.addEventListener('click', () => {
         gradePills.forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
         currentGrade = parseInt(btn.dataset.grade);
+        updateTheme(currentGrade);
         if (currentData) processData(currentData);
     });
 });
+
+// Init
+updateTheme(currentGrade);
 
 const handleFile = (file) => {
     currentFilename = file.name;

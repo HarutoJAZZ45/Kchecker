@@ -12,6 +12,37 @@
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* Grade Themes */
+body[data-grade="1"] {
+    --primary: #0056b3;
+    --bg: #f8fbff;
+}
+
+body[data-grade="2"] {
+    --primary: #006994;
+    --bg: #f0f7f9;
+}
+
+body[data-grade="3"] {
+    --primary: #0047ab;
+    --bg: #f0f3f9;
+}
+
+body[data-grade="4"] {
+    --primary: #2a52be;
+    --bg: #f2f0f9;
+}
+
+body[data-grade="5"] {
+    --primary: #003153;
+    --bg: #f0f1f4;
+}
+
+body[data-grade="6"] {
+    --primary: #1a237e;
+    --bg: #efeff5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,6 +55,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .container {
