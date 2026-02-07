@@ -153,7 +153,7 @@ const processData = (data) => {
         <td>
           ${rowKanjiInfo.map(item => {
                 const gradeLabel = item.grade === 7 ? '中+' : `${item.grade}年`;
-                return `<span class="unlearned-badge" title="${gradeLabel}">${item.char}<small>${gradeLabel}</small></span>`;
+                return `<span class="unlearned-badge" title="${gradeLabel}"><span class="kanji-char">${item.char}</span><small>${gradeLabel}</small></span>`;
             }).join('')}
         </td>
       `;
