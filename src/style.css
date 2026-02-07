@@ -14,47 +14,47 @@
 
 /* Grade Themes - Colorful and Distinct Palettes (No Red) */
 body[data-grade="1"] {
-    --primary: #008b8b;
-    --bg: #e0ffff;
-    --accent: #afeeee;
+    --primary: #0070f3;
+    --bg: #ebf5ff;
+    --accent: #b3d7ff;
 }
 
-/* Cyan/DarkTurquoise */
+/* Clear Sky Blue */
 body[data-grade="2"] {
-    --primary: #dd6b20;
-    --bg: #fffaf0;
-    --accent: #fbd38d;
+    --primary: #f59e0b;
+    --bg: #fffbeb;
+    --accent: #fef3c7;
 }
 
-/* Orange */
+/* Amber/Orange */
 body[data-grade="3"] {
-    --primary: #2f855a;
-    --bg: #f0fff4;
-    --accent: #9ae6b4;
+    --primary: #10b981;
+    --bg: #ecfdf5;
+    --accent: #d1fae5;
 }
 
-/* Strong Green */
+/* Emerald Green */
 body[data-grade="4"] {
-    --primary: #805ad5;
-    --bg: #faf5ff;
-    --accent: #d6bcfa;
+    --primary: #8b5cf6;
+    --bg: #f5f3ff;
+    --accent: #ede9fe;
 }
 
-/* Purple */
+/* Violet/Purple */
 body[data-grade="5"] {
-    --primary: #d53f8c;
-    --bg: #fff5f7;
-    --accent: #fbb6ce;
+    --primary: #ec4899;
+    --bg: #fdf2f8;
+    --accent: #fce7f3;
 }
 
-/* Magenta/Pink */
+/* Pink/Magenta */
 body[data-grade="6"] {
-    --primary: #1a365d;
-    --bg: #ebf4ff;
-    --accent: #a3bffa;
+    --primary: #374151;
+    --bg: #f3f4f6;
+    --accent: #e5e7eb;
 }
 
-/* Deep Navy */
+/* Dark Charcoal/Gray */
 
 /* Enhance visual difference with a subtle gradient overlay */
 body::before {
