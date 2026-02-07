@@ -68,6 +68,29 @@ fileInput.addEventListener('change', (e) => {
     if (file) handleFile(file);
 });
 
+// Drag and Drop support
+window.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    document.body.classList.add('drag-active');
+});
+
+window.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    // Only remove if we're actually leaving the window
+    if (e.relatedTarget === null) {
+        document.body.classList.remove('drag-active');
+    }
+});
+
+window.addEventListener('drop', (e) => {
+    e.preventDefault();
+    document.body.classList.remove('drag-active');
+    const file = e.dataTransfer.files[0];
+    if (file && file.name.endsWith('.csv')) {
+        handleFile(file);
+    }
+});
+
 const updateTheme = (grade) => {
     document.body.setAttribute('data-grade', grade);
 };
