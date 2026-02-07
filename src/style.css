@@ -12,14 +12,14 @@
     --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Grade Themes - More Saturated backgrounds for unmistakable identity */
+/* Grade Themes - Colorful and Distinct Palettes (No Red) */
 body[data-grade="1"] {
-    --primary: #0070f3;
-    --bg: #dbeafe;
-    --accent: #93c5fd;
+    --primary: #ec4899;
+    --bg: #fdf2f8;
+    --accent: #fce7f3;
 }
 
-/* Blue (Sky) */
+/* Pink/Magenta (Original 5) */
 body[data-grade="2"] {
     --primary: #d97706;
     --bg: #fef3c7;
@@ -42,12 +42,12 @@ body[data-grade="4"] {
 
 /* Violet (Purple) */
 body[data-grade="5"] {
-    --primary: #db2777;
-    --bg: #fce7f3;
-    --accent: #f472b6;
+    --primary: #0070f3;
+    --bg: #dbeafe;
+    --accent: #93c5fd;
 }
 
-/* Pink (Magenta) */
+/* Blue (Sky) (Original 1) */
 body[data-grade="6"] {
     --primary: #4b5563;
     --bg: #e5e7eb;
