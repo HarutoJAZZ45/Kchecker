@@ -1,4 +1,5 @@
 :root {
+    /* 基本のカラーパレット定義 */
     --primary: #0056b3;
     --primary-hover: color-mix(in srgb, var(--primary), black 20%);
     --secondary: #e7f1ff;
@@ -12,51 +13,50 @@
     --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Grade Themes - Colorful and Distinct Palettes (No Red) */
+/* 学年別テーマ：学年ごとにメインカラーと背景色を定義する */
+/* 1年: ピンク */
 body[data-grade="1"] {
     --primary: #ec4899;
     --bg: #fdf2f8;
     --accent: #fce7f3;
 }
 
-/* Pink/Magenta (Original 5) */
+/* 2年: アンバー */
 body[data-grade="2"] {
     --primary: #d97706;
     --bg: #fef3c7;
     --accent: #fbbf24;
 }
 
-/* Amber (Orange) */
+/* 3年: エメラルド */
 body[data-grade="3"] {
     --primary: #059669;
     --bg: #d1fae5;
     --accent: #6ee7b7;
 }
 
-/* Emerald (Green) */
+/* 4年: バイオレット */
 body[data-grade="4"] {
     --primary: #7c3aed;
     --bg: #ede9fe;
     --accent: #a78bfa;
 }
 
-/* Violet (Purple) */
+/* 5年: ブルー */
 body[data-grade="5"] {
     --primary: #0070f3;
     --bg: #dbeafe;
     --accent: #93c5fd;
 }
 
-/* Blue (Sky) (Original 1) */
+/* 6年: ダークグレー */
 body[data-grade="6"] {
     --primary: #4b5563;
     --bg: #e5e7eb;
     --accent: #9ca3af;
 }
 
-/* Gray (Charcoal) */
-
-/* Background refinement */
+/* 背景装飾：左上にわずかな光彩を入れる */
 body::before {
     content: '';
     position: fixed;
@@ -81,11 +81,12 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    /* 背景色変更時のアニメーション */
     transition: background-color 0.4s ease, color 0.4s ease;
     min-height: 100vh;
 }
 
-/* Drag and Drop visual feedback */
+/* ドラッグ&ドロップ時の視覚フィードバック */
 body.drag-active::after {
     content: 'CSVをドロップして読み込み';
     position: fixed;
@@ -111,7 +112,7 @@ body.drag-active::after {
     padding: 0 2rem;
 }
 
-/* Header & Controls */
+/* ナビゲーションバー */
 .navbar {
     background: var(--white);
     padding: 0.75rem 0;
@@ -129,6 +130,7 @@ body.drag-active::after {
     align-items: center;
 }
 
+/* ロゴアイコンの正方形デザイン */
 .logo-icon {
     background: var(--primary);
     color: var(--white);
@@ -148,6 +150,7 @@ body.drag-active::after {
     gap: 1.5rem;
 }
 
+/* 学年選択：角ばったピル型グループ */
 .grade-pill-group {
     display: flex;
     background: #f1f5f9;
@@ -174,12 +177,14 @@ body.drag-active::after {
     background: #e2e8f0;
 }
 
+/* 選択中の学年ボタンの強調 */
 .grade-btn.active {
     background: var(--primary);
     color: var(--white);
     box-shadow: none;
 }
 
+/* メインのアクションボタン */
 .btn-primary-small {
     display: inline-flex;
     align-items: center;
@@ -205,7 +210,7 @@ body.drag-active::after {
     height: 1.1rem;
 }
 
-/* Result Section refinements */
+/* 結果表示セクション：左端のカラーラインが特徴 */
 .result-section {
     background: var(--white);
     border-radius: 0;
@@ -216,18 +221,6 @@ body.drag-active::after {
     border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .status-bar {
@@ -263,11 +256,12 @@ body.drag-active::after {
     color: var(--text-main);
 }
 
+/* アラート件数の赤色強調 */
 .stat-item.highlight .value {
     color: #e53e3e;
 }
 
-/* Table Style */
+/* 結果表示用テーブル */
 .table-container {
     overflow-x: auto;
     border-radius: 0;
@@ -298,14 +292,11 @@ td {
     vertical-align: middle;
 }
 
-tr:last-child td {
-    border-bottom: none;
-}
-
 tr:hover td {
     background-color: #f8fafc;
 }
 
+/* 未習漢字バッジ：赤枠と黒文字の組み合わせ */
 .unlearned-badge {
     display: inline-flex;
     align-items: center;
@@ -324,6 +315,7 @@ tr:hover td {
     padding: 0.2rem 0.5rem;
 }
 
+/* バッジ内の学年ラベル：赤背景に白文字で強調 */
 .unlearned-badge small {
     font-size: 0.75rem;
     color: #ffffff;
@@ -336,34 +328,14 @@ tr:hover td {
     align-items: center;
 }
 
-.highlight-text {
-    background: rgba(255, 0, 0, 0.05);
-    padding: 1px 2px;
-}
-
+/* 問題文内の未習漢字の強調 */
 .highlight-kanji {
     color: #ff0000;
     font-weight: 900;
     text-decoration: underline double #ff0000;
 }
 
-/* Buttons */
-.btn-secondary {
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    border: 1px solid var(--border);
-    background: var(--white);
-    color: var(--text-main);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.btn-secondary:hover {
-    background: #f1f5f9;
-}
-
-/* Empty State */
+/* 初期表示画面（ファイル未選択時） */
 .empty-state {
     text-align: center;
     padding: 6rem 2rem;
@@ -389,19 +361,6 @@ tr:hover td {
     opacity: 0.5;
 }
 
-.empty-state h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
 .empty-state p {
     color: var(--text-muted);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 3rem 0;
-    color: var(--text-muted);
-    font-size: 0.875rem;
 }
