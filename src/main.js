@@ -16,7 +16,7 @@ const resAlertCount = document.getElementById('res-alert-count');
 // アプリケーションの状態管理
 let currentData = null;      // 読み込まれたCSVデータ
 let currentFilename = '';    // 読み込まれたファイル名
-let currentGrade = 1;       // 現在選択されている対象学年
+let currentGrade = 5;       // 現在選択されている対象学年（初期値は5年）
 
 /**
  * 漢字判定ロジック
