@@ -12,44 +12,51 @@
     --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Grade Themes - Dynamic Backgrounds */
+/* Grade Themes - Colorful and Distinct Palettes */
 body[data-grade="1"] {
-    --primary: #0056b3;
-    --bg: #f0f7ff;
-    --accent: #00a8ff;
+    --primary: #e53e3e;
+    --bg: #fff5f5;
+    --accent: #feb2b2;
 }
 
+/* Red */
 body[data-grade="2"] {
-    --primary: #007bb3;
-    --bg: #e6f7ff;
-    --accent: #00d2ff;
+    --primary: #dd6b20;
+    --bg: #fffaf0;
+    --accent: #fbd38d;
 }
 
+/* Orange */
 body[data-grade="3"] {
-    --primary: #2a52be;
-    --bg: #f0f0ff;
-    --accent: #7b61ff;
+    --primary: #38a169;
+    --bg: #f0fff4;
+    --accent: #9ae6b4;
 }
 
+/* Green */
 body[data-grade="4"] {
-    --primary: #1e3a8a;
-    --bg: #eef2ff;
-    --accent: #3b82f6;
+    --primary: #3182ce;
+    --bg: #ebf8ff;
+    --accent: #90cdf4;
 }
 
+/* Blue */
 body[data-grade="5"] {
-    --primary: #0f172a;
-    --bg: #f1f5f9;
-    --accent: #64748b;
+    --primary: #805ad5;
+    --bg: #faf5ff;
+    --accent: #d6bcfa;
 }
 
+/* Purple */
 body[data-grade="6"] {
-    --primary: #312e81;
-    --bg: #eef2ff;
-    --accent: #6366f1;
+    --primary: #319795;
+    --bg: #e6fffa;
+    --accent: #81e6d9;
 }
 
-/* Adding subtle pattern/gradient to make it more obvious */
+/* Teal */
+
+/* Enhance visual difference with a subtle gradient overlay */
 body::before {
     content: '';
     position: fixed;
@@ -58,7 +65,7 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
 }
 
