@@ -288,16 +288,15 @@ tr:hover td {
 .unlearned-badge {
     display: inline-flex;
     align-items: center;
-    background: #fff5f5;
-    color: #c53030;
+    background: #fff;
+    color: #ff0000;
     font-weight: 700;
     padding: 0;
     border-radius: 0;
     margin: 0.15rem;
     font-size: 1.1rem;
-    border: 1px solid #feb2b2;
-    border-left: 4px solid #e53e3e;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 2px solid #ff0000;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .unlearned-badge .kanji-char {
@@ -305,11 +304,11 @@ tr:hover td {
 }
 
 .unlearned-badge small {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #ffffff;
-    background: #c53030;
-    padding: 0.35rem 0.4rem;
-    font-weight: 700;
+    background: #ff0000;
+    padding: 0.4rem 0.5rem;
+    font-weight: 900;
     line-height: 1;
     height: 100%;
     display: flex;
@@ -317,15 +316,14 @@ tr:hover td {
 }
 
 .highlight-text {
-    background: #fff5f5;
+    background: rgba(255, 0, 0, 0.05);
     padding: 1px 2px;
-    border-radius: 2px;
 }
 
 .highlight-kanji {
-    color: #e53e3e;
-    font-weight: 700;
-    text-decoration: underline wavy #feb2b2;
+    color: #ff0000;
+    font-weight: 900;
+    text-decoration: underline double #ff0000;
 }
 
 /* Buttons */
