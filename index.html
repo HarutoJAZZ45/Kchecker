@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kchecker - 漢字配当学年判定ツール</title>
+    <meta name="description" content="教材のCSVファイルに含まれる漢字を判定し、指定した学年までに習わない漢字を抽出するスタイリッシュなツールです。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header class="navbar">
+            <div class="container navbar-inner">
+                <div class="logo">
+                    <span class="logo-icon">漢</span>
+                </div>
+                <div class="controls-wrapper">
+                    <div class="grade-pill-group" id="grade-pills">
+                        <button class="grade-btn" data-grade="1">1年</button>
+                        <button class="grade-btn" data-grade="2">2年</button>
+                        <button class="grade-btn" data-grade="3">3年</button>
+                        <button class="grade-btn" data-grade="4">4年</button>
+                        <button class="grade-btn active" data-grade="5">5年</button>
+                        <button class="grade-btn" data-grade="6">6年</button>
+                    </div>
+                    <div class="upload-compact">
+                        <input type="file" id="file-input" accept=".csv" hidden>
+                        <button id="upload-trigger" class="btn-primary-small">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                            </svg>
+                            CSVを選択
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section id="result-section" class="result-section hidden">
+                <div class="status-bar">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="label">ファイル名:</span>
+                            <span id="res-filename" class="value">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">問題数:</span>
+                            <span id="res-total-rows" class="value">0</span>
+                        </div>
+                        <div class="stat-item highlight">
+                            <span class="label">未学習漢字を含む問題:</span>
+                            <span id="res-alert-count" class="value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="result-table">
+                        <thead>
+                            <tr>
+                                <th width="15%">問題番号</th>
+                                <th width="60%">内容</th>
+                                <th width="25%">未学習漢字</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result-body">
+                            <!-- Rows inserted by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div id="empty-state" class="empty-state">
+                <div class="illustration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                </div>
+                <p>CSVファイルを読み込むと、指定学年（未習得）の漢字を抽出します。</p>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
