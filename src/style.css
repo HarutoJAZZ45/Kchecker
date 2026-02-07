@@ -12,14 +12,14 @@
     --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Grade Themes - Colorful and Distinct Palettes */
+/* Grade Themes - Colorful and Distinct Palettes (No Red) */
 body[data-grade="1"] {
-    --primary: #e53e3e;
-    --bg: #fff5f5;
-    --accent: #feb2b2;
+    --primary: #3182ce;
+    --bg: #ebf8ff;
+    --accent: #90cdf4;
 }
 
-/* Red */
+/* Blue */
 body[data-grade="2"] {
     --primary: #dd6b20;
     --bg: #fffaf0;
@@ -35,23 +35,23 @@ body[data-grade="3"] {
 
 /* Green */
 body[data-grade="4"] {
-    --primary: #3182ce;
-    --bg: #ebf8ff;
-    --accent: #90cdf4;
-}
-
-/* Blue */
-body[data-grade="5"] {
     --primary: #805ad5;
     --bg: #faf5ff;
     --accent: #d6bcfa;
 }
 
 /* Purple */
+body[data-grade="5"] {
+    --primary: #d53f8c;
+    --bg: #fff5f7;
+    --accent: #fbb6ce;
+}
+
+/* Magenta/Pink */
 body[data-grade="6"] {
-    --primary: #319795;
-    --bg: #e6fffa;
-    --accent: #81e6d9;
+    --primary: #008080;
+    --bg: #e6ffff;
+    --accent: #81e6e6;
 }
 
 /* Teal */
