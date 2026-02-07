@@ -12,51 +12,51 @@
     --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Grade Themes - Colorful and Distinct Palettes (No Red) */
+/* Grade Themes - More Saturated backgrounds for unmistakable identity */
 body[data-grade="1"] {
     --primary: #0070f3;
-    --bg: #ebf5ff;
-    --accent: #b3d7ff;
+    --bg: #dbeafe;
+    --accent: #93c5fd;
 }
 
-/* Clear Sky Blue */
+/* Blue (Sky) */
 body[data-grade="2"] {
-    --primary: #f59e0b;
-    --bg: #fffbeb;
-    --accent: #fef3c7;
+    --primary: #d97706;
+    --bg: #fef3c7;
+    --accent: #fbbf24;
 }
 
-/* Amber/Orange */
+/* Amber (Orange) */
 body[data-grade="3"] {
-    --primary: #10b981;
-    --bg: #ecfdf5;
-    --accent: #d1fae5;
+    --primary: #059669;
+    --bg: #d1fae5;
+    --accent: #6ee7b7;
 }
 
-/* Emerald Green */
+/* Emerald (Green) */
 body[data-grade="4"] {
-    --primary: #8b5cf6;
-    --bg: #f5f3ff;
-    --accent: #ede9fe;
+    --primary: #7c3aed;
+    --bg: #ede9fe;
+    --accent: #a78bfa;
 }
 
-/* Violet/Purple */
+/* Violet (Purple) */
 body[data-grade="5"] {
-    --primary: #ec4899;
-    --bg: #fdf2f8;
-    --accent: #fce7f3;
+    --primary: #db2777;
+    --bg: #fce7f3;
+    --accent: #f472b6;
 }
 
-/* Pink/Magenta */
+/* Pink (Magenta) */
 body[data-grade="6"] {
-    --primary: #374151;
-    --bg: #f3f4f6;
-    --accent: #e5e7eb;
+    --primary: #4b5563;
+    --bg: #e5e7eb;
+    --accent: #9ca3af;
 }
 
-/* Dark Charcoal/Gray */
+/* Gray (Charcoal) */
 
-/* Enhance visual difference with a subtle gradient overlay */
+/* Background refinement */
 body::before {
     content: '';
     position: fixed;
@@ -65,7 +65,7 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 80%);
     pointer-events: none;
 }
 
