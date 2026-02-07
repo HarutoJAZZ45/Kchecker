@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 0;
     font-weight: 700;
     font-size: 1.1rem;
 }
@@ -130,14 +130,14 @@ body {
 .grade-pill-group {
     display: flex;
     background: #f1f5f9;
-    padding: 0.25rem;
-    border-radius: 0.75rem;
-    gap: 0.15rem;
+    padding: 2px;
+    border-radius: 0;
+    gap: 0;
 }
 
 .grade-btn {
-    padding: 0.4rem 0.85rem;
-    border-radius: 0.6rem;
+    padding: 0.4rem 1rem;
+    border-radius: 0;
     border: none;
     background: transparent;
     color: var(--text-muted);
@@ -154,20 +154,20 @@ body {
 }
 
 .grade-btn.active {
-    background: var(--white);
-    color: var(--primary);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: none;
 }
 
 .btn-primary-small {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     background: var(--primary);
     color: var(--white);
-    border: none;
-    border-radius: 0.75rem;
+    border: 1px solid var(--primary);
+    border-radius: 0;
     font-weight: 600;
     font-size: 0.85rem;
     cursor: pointer;
@@ -187,11 +187,14 @@ body {
 /* Result Section refinements */
 .result-section {
     background: var(--white);
-    border-radius: 1rem;
+    border-radius: 0;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
-    border: 1px solid var(--border);
+    border-left: 6px solid var(--primary);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 @keyframes fadeIn {
@@ -246,7 +249,7 @@ body {
 /* Table Style */
 .table-container {
     overflow-x: auto;
-    border-radius: 0.75rem;
+    border-radius: 0;
     border: 1px solid var(--border);
 }
 
@@ -286,26 +289,28 @@ tr:hover td {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    background: #fee2e2;
-    color: #991b1b;
+    background: var(--white);
+    color: var(--text-main);
     font-weight: 700;
     padding: 0.25rem 0.6rem;
-    border-radius: 0.5rem;
+    border-radius: 0;
     margin: 0.15rem;
     font-size: 1rem;
-    border: 1px solid #fecaca;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--primary);
+    border-left-width: 4px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .unlearned-badge small {
     font-size: 0.65rem;
     opacity: 0.8;
-    background: #fecaca;
+    background: var(--bg);
     padding: 0.05rem 0.25rem;
-    border-radius: 0.25rem;
+    border-radius: 0;
     font-weight: 600;
     margin-left: 0.25rem;
     line-height: 1;
+    border: 1px solid var(--border);
 }
 
 .highlight-text {
@@ -341,8 +346,9 @@ tr:hover td {
     text-align: center;
     padding: 6rem 2rem;
     background: var(--white);
-    border-radius: 1.5rem;
-    border: 2px dashed var(--border);
+    border-radius: 0;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .empty-state.hidden,
