@@ -192,27 +192,29 @@ const processData = (data) => {
             });
         });
 
-        // 未習漢字が見つかった場合のみ、テーブルに行を追加する
+        // 未習漢字が見つかった場合、アラート数をカウントする
         if (rowKanjiInfo.length > 0) {
             alertCount++;
-            const tr = document.createElement('tr');
-
-            // 内容の表示用テキストを作成。空セルを除外してパイプで連結する。
-            const problemContent = row.filter(c => String(c).trim().length > 0).join(' | ');
-            const highlightedContent = highlightUnlearned(problemContent, rowKanjiInfo);
-
-            tr.innerHTML = `
-        <td>${relativeIndex}</td>
-        <td><div class="problem-text">${highlightedContent}</div></td>
-        <td>
-          ${rowKanjiInfo.map(item => {
-                const gradeLabel = item.grade === 7 ? '中+' : `${item.grade}年`;
-                return `<span class="unlearned-badge" title="${gradeLabel}"><span class="kanji-char">${item.char}</span><small>${gradeLabel}</small></span>`;
-            }).join('')}
-        </td>
-      `;
-            resultBody.appendChild(tr);
         }
+
+        // テーブルに行を追加する（全ての問題を表示）
+        const tr = document.createElement('tr');
+
+        // 内容の表示用テキストを作成。空セルを除外してパイプで連結する。
+        const problemContent = row.filter(c => String(c).trim().length > 0).join(' | ');
+        const highlightedContent = highlightUnlearned(problemContent, rowKanjiInfo);
+
+        tr.innerHTML = `
+    <td>${relativeIndex}</td>
+    <td><div class="problem-text">${highlightedContent}</div></td>
+    <td>
+      ${rowKanjiInfo.map(item => {
+            const gradeLabel = item.grade === 7 ? '中+' : `${item.grade}年`;
+            return `<span class="unlearned-badge" title="${gradeLabel}"><span class="kanji-char">${item.char}</span><small>${gradeLabel}</small></span>`;
+        }).join('')}
+    </td>
+  `;
+        resultBody.appendChild(tr);
         relativeIndex++;
     });
 
